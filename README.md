@@ -40,9 +40,9 @@ LinkedIn: https://www.linkedin.com/in/david-verde-3349b114b/
 
 👤 Waqas Ahmad
 
-GitHub: @githubhandle
-Twitter: @twitterhandle
-LinkedIn: @LinkedIn
+GitHub: [@githubhandle](https://github.com/waqas)
+Twitter: [@twitterhandle](https://twitter.com/waqas)
+LinkedIn: [@LinkedIn](https://www.linkedin.com/in/waqas/)
 
 
 
