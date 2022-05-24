@@ -3,13 +3,22 @@ const addBook = document.getElementById('add-book');
 const newTitle = document.getElementById('new-title');
 const newAuthor = document.getElementById('new-author');
 let bookData = [];
-class Book {
-  constructor(title = 'book', author = 'people', id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
+
+function storeData() {
+  localStorage.setItem('bookData', JSON.stringify(bookData));
+}
+
+function loadData() {
+  const data = localStorage.getItem('bookData');
+  if (data) {
+    bookData = JSON.parse(data);
+    bookData.forEach((book) => {
+      bookList.appendChild(getLi(book.title, book.author, book.id));
+    });
   }
 }
+
+loadData();
 
 function getLi(title, author, id) {
   const divAuthor = document.createElement('div');
@@ -42,9 +51,8 @@ function getLi(title, author, id) {
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    const book = new Book(newTitle.value, newAuthor.value, id);
-    bookData.push(book);
-    bookList.appendChild(getLi(book.title, book.author, book.id));
+    bookData.push({title: newTitle.value, author: newAuthor.value, id});
+    bookList.appendChild(getLi(bookData[bookData.length-1]["title"], bookData[bookData.length-1]["author"], bookData[bookData.length-1]["id"]));
     storeData();
   }
 });
@@ -52,8 +60,10 @@ addBook.addEventListener('click', () => {
 function removeLi(id) {
   const li = document.getElementById(`book${id}`);
   li.remove();
-  bookData = bookData.filter((book) => book.id !== id);
+  bookData = bookData.filter(book => { console.log(
+    bookData
+  );return book.id !== id});
   storeData();
 }
 
-removeLi(0);
+//  removeLi(0);
