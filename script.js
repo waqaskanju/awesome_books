@@ -23,14 +23,15 @@ class Book {
 }
 
 function getLi(book) {
-  const divAuthor = document.createElement('div');
   const divTitle = document.createElement('div');
+  const divAuthor = document.createElement('div');
+  const divTitleAuthor = document.createElement('div');
   const removeButton = document.createElement('button');
-  const hr = document.createElement('hr');
   const li = document.createElement('li');
 
-  divTitle.classList.add('author');
-  divAuthor.classList.add('title');
+  divTitle.classList.add('title');
+  divAuthor.classList.add('author');
+  divTitleAuthor.classList.add('containerTitleAuthor');
   removeButton.classList.add('remove');
   removeButton.setAttribute('id', `button${book.id}`);
   const stringifyedBook = JSON.stringify(book);
@@ -43,10 +44,10 @@ function getLi(book) {
   removeButton.innerText = 'Remove';
   removeButton.type = 'button';
 
-  li.appendChild(divTitle);
-  li.appendChild(divAuthor);
+  divTitleAuthor.appendChild(divTitle);
+  divTitleAuthor.appendChild(divAuthor);
+  li.appendChild(divTitleAuthor);
   li.appendChild(removeButton);
-  li.appendChild(hr);
 
   return li;
 }
@@ -70,11 +71,14 @@ loadData();
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    const book = new Book(newTitle.value, newAuthor.value, id);
+    const book = new Book(`"${newTitle.value}"`, `by ${newAuthor.value}`, id);
     book.addBook();
     bookList.appendChild(getLi(book));
     storeData();
+    setStyles();
   }
+  newTitle.value = '';
+  newAuthor.value = '';
 });
 
 function removeLi(id) {
@@ -87,3 +91,14 @@ const a = 0;
 const b = 1;
 
 if (a > b) removeLi(0);
+
+function setStyles() {
+  let index = 1;
+  const liList = document.querySelectorAll('.book')
+  liList.forEach(element => {
+    if(index%2 != 0) {
+      element.classList.add('bookBlack');
+    }
+    index += 1;
+  })
+}
