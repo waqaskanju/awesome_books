@@ -30,7 +30,7 @@
 - Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
 - LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
-👤 **David Verde Alvarez
+👤 **David Verde Alvarez**
 
 GitHub: [@DavidVerdeAlvarez]https://github.com/Unyielding1
 
@@ -38,7 +38,7 @@ Twitter: [@DavidVerdeAlvarez]https://twitter.com/UnyieldingOne
 
 LinkedIn: [@DavidVerdeAlvarez]https://www.linkedin.com/in/david-verde-3349b114b/
 
-👤 **Waqas Ahmad
+👤 **Waqas Ahmad**
 
 GitHub: [@githubhandle](https://github.com/waqas)
 Twitter: [@twitterhandle](https://twitter.com/waqas)
