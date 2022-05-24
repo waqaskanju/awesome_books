@@ -3,13 +3,6 @@ const addBook = document.getElementById('add-book');
 const newTitle = document.getElementById('new-title');
 const newAuthor = document.getElementById('new-author');
 let bookData = [];
-class Book {
-  constructor(title = 'book', author = 'people', id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
 
 function getLi(title, author, id) {
   const divAuthor = document.createElement('div');
@@ -58,7 +51,10 @@ loadData();
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    const book = new Book(newTitle.value, newAuthor.value, id);
+    const book = new Object();
+    book.title = newTitle.value;
+    book.author = newAuthor.value;
+    book.id = id;
     bookData.push(book);
     bookList.appendChild(getLi(book.title, book.author, book.id));
     storeData();
@@ -72,4 +68,3 @@ function removeLi(id) {
   storeData();
 }
 
-removeLi(0);
