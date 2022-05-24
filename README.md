@@ -2,24 +2,24 @@
 
 # Awsome Books
 
-> In this Project we are creating a web page that makke a list of books. You can Add a new book and remove a book from the list. The list is saved dynamicly 
+> In this project, we design a web page that creates a list of books. You can add a new book and remove a book from the list. The list is saved dynamically on the local storage, so every time you reload the page, the data saved on the local storage is displayed on the page.
 
 
 ## Built With
 
 - HTML, CSS and Javascript
-- Sass
 - Linters
+
 
 ## Live Demo
 
-- [Video Explanation](https://www.loom.com/share/52722df18bb14eaa880d0e6513e4d4a6)
-- [Live Demo](https://kaskmil.github.io/spring_concert/)
+> Coming soon.
 
 
 ## Getting Started
 
-> You can just click on Live Demo and go straight to the page, or download the source code and run it locally.
+> You can download the source code and run it locally. The Live Demo is going to be available proximately.
+
 
 
 ## Authors
@@ -30,20 +30,19 @@
 - Twitter: [@TomMilanesi](https://twitter.com/TomasMilanesi)
 - LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
-👤David Verde Alvarez
+👤 **David Verde Alvarez
 
-GitHub: https://github.com/Unyielding1
+GitHub: [@DavidVerdeAlvarez]https://github.com/Unyielding1
 
-Twitter: https://twitter.com/UnyieldingOne
+Twitter: [@DavidVerdeAlvarez]https://twitter.com/UnyieldingOne
 
-LinkedIn: https://www.linkedin.com/in/david-verde-3349b114b/
+LinkedIn: [@DavidVerdeAlvarez]https://www.linkedin.com/in/david-verde-3349b114b/
 
-👤 Waqas Ahmad
+👤 **Waqas Ahmad
 
 GitHub: [@githubhandle](https://github.com/waqas)
 Twitter: [@twitterhandle](https://twitter.com/waqas)
 LinkedIn: [@LinkedIn](https://www.linkedin.com/in/waqas/)
-
 
 
 
@@ -57,11 +56,7 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Credits
 
-I want to say thank you to Cindy Shin, my page is inspired in her work on Behance.
-You can take a look on any of her works here:
-- Behance: [CindyShin](https://www.behance.net/adagio07)
 
 ## 📝 License
 
