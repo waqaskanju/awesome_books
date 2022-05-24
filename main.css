@@ -30,3 +30,17 @@ a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 96%;
+  margin: 25px;
+  border: 5px solid rgb(59, 72, 255);
+}
