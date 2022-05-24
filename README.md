@@ -35,6 +35,12 @@ GitHub: https://github.com/Unyielding1
 Twitter: https://twitter.com/UnyieldingOne
 LinkedIn: https://www.linkedin.com/in/david-verde-3349b114b/
 
+👤 Waqas Ahmad
+
+GitHub: @githubhandle
+Twitter: @twitterhandle
+LinkedIn: @LinkedIn
+
 
 ## 🤝 Contributing
 
