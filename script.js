@@ -5,7 +5,7 @@ const newAuthor = document.getElementById('new-author');
 let bookData = [];
 
 class Book {
-  constructor(title = 'title', author = 'author', id) {
+  constructor(title = 'title', author = 'author', id = '0') {
     this.title = title;
     this.author = author;
     this.id = id;
@@ -77,8 +77,7 @@ addBook.addEventListener('click', () => {
   }
 });
 
-function removeLi(id, book) {
-  console.log(book);
+function removeLi(id) {
   const li = document.getElementById(`book${id}`);
   li.remove();
   bookData = bookData.filter((book) => book.id !== id);
