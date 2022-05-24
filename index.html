@@ -10,32 +10,18 @@
 
 <body>
   <h1>Awsome Books</h1>
-  <section id="mybooks">
-    <!-- <div>
-      <span>title</span> <br>
-      <span>author</span><br>
-      <button>Remove</button>
-      <hr>
-    </div>
-
-    <div>
-      <span>title</span><br>
-      <span>author</span><br>
-      <button>Remove</button>
-    </div> -->
+  <section id="all-books">
+    <ul id="book-list">
+      
+    </ul>
   </section>
-  <hr>
-
-    <label for="title"></label>
-    <input type="text" name="title" id="title" placeholder="title" />
-    <br>
-    <br>
-    <label for="author"></label>
-    <input type="text" name="author" id="author" placeholder="author" />
-    <br>
-    <br>
-    <button id="add">Add</button>
-
+  <section id="add-new-book">
+    <fieldset id="new-book">
+      <input type="text" name="title" id="new-title" placeholder="Title">
+      <input type="text" name="author" id="new-author" placeholder="Author">
+      <button type="button" id="add-book">Add</button>
+    </fieldset>
+  </section>  
   <script src="script.js"></script>
 </body>
 
