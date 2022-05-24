@@ -66,3 +66,5 @@ function removeLi(id) {
   bookData = bookData.filter((book) => book.id !== id);
   storeData();
 }
+
+removeLi(0);
