@@ -2,7 +2,10 @@ const bookList = document.getElementById('book-list');
 const addBook = document.getElementById('add-book');
 const newTitle = document.getElementById('new-title');
 const newAuthor = document.getElementById('new-author');
+const allBooks = document.getElementById('all-books');
 let bookData = [];
+
+setBorder();
 
 class Book {
   constructor(title = 'title', author = 'author', id = '0') {
@@ -58,11 +61,13 @@ function storeData() {
 
 function loadData() {
   const data = localStorage.getItem('bookData');
+  console.log(JSON.parse(data))
   if (data) {
     bookData = JSON.parse(data);
     bookData.forEach((book) => {
       bookList.appendChild(getLi(book));
     });
+    setStyles();
   }
 }
 
@@ -74,6 +79,7 @@ addBook.addEventListener('click', () => {
     const book = new Book(`"${newTitle.value}"`, `by ${newAuthor.value}`, id);
     book.addBook();
     bookList.appendChild(getLi(book));
+    setBorder();
     storeData();
     setStyles();
   }
@@ -86,6 +92,7 @@ function removeLi(id) {
   li.remove();
   bookData = bookData.filter((book) => book.id !== id);
   storeData();
+  setBorder();
 }
 const a = 0;
 const b = 1;
@@ -101,4 +108,14 @@ function setStyles() {
     }
     index += 1;
   })
+}
+
+function setBorder() {
+  const data = JSON.parse(localStorage.getItem('bookData'));
+  if(bookData.length > 0 || data.length > 0) {
+    allBooks.classList.add('border');
+  }
+  else if(bookData.length == 0 && data.length == 0) {
+    allBooks.classList.remove('border');
+  }
 }
