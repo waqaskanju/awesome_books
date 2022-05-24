@@ -51,7 +51,7 @@ loadData();
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    const book = {title: newTitle.value, author: newAuthor.value, id: id};
+    const book = { title: newTitle.value, author: newAuthor.value, id };
     bookData.push(book);
     bookList.appendChild(getLi(book.title, book.author, book.id));
     storeData();
