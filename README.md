@@ -31,8 +31,11 @@
 - LinkedIn: [Tomas Milanesi](https://www.linkedin.com/in/tomas-milanesi-3427bb185/)
 
 👤David Verde Alvarez
+
 GitHub: https://github.com/Unyielding1
+
 Twitter: https://twitter.com/UnyieldingOne
+
 LinkedIn: https://www.linkedin.com/in/david-verde-3349b114b/
 
 👤 Waqas Ahmad
