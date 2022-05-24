@@ -51,14 +51,13 @@ loadData();
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    const book = new Object();
-    book.title = newTitle.value;
-    book.author = newAuthor.value;
-    book.id = id;
+    const book = {title: newTitle.value, author: newAuthor.value, id: id};
     bookData.push(book);
     bookList.appendChild(getLi(book.title, book.author, book.id));
     storeData();
   }
+  newTitle.value = '';
+  newAuthor.value = '';
 });
 
 function removeLi(id) {
@@ -67,4 +66,3 @@ function removeLi(id) {
   bookData = bookData.filter((book) => book.id !== id);
   storeData();
 }
-
