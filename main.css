@@ -31,10 +31,20 @@ a {
   color: rgb(0, 0, 0);
 }
 
-#contact {
+.contact-header {
   display: flex;
   justify-content: center;
   align-self: center;
+  font-size: 3rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
 }
 
 footer {
@@ -43,4 +53,8 @@ footer {
   width: 96%;
   margin: 25px;
   border: 5px solid rgb(59, 72, 255);
+  display: flex;
+  align-self: center;
+  padding-left: 3px;
+  font-size: 1rem;
 }
