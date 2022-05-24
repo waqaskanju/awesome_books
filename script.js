@@ -4,7 +4,28 @@ const newTitle = document.getElementById('new-title');
 const newAuthor = document.getElementById('new-author');
 let bookData = [];
 
-function getLi(title, author, id) {
+class Book {
+  constructor(title = 'title', author = 'author', id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+
+  addBook() {
+    // This will add itself to the bookData Array
+    bookData.push(this);
+  }
+
+  removeBook() {
+    // This Will Remove It self From the bookData Array
+    bookData.filter((book) => book.id !== this.id);
+  }
+}
+
+const dmmyBook = new Book();
+console.log(dmmyBook);
+
+function getLi(title, author, id, book) {
   const divAuthor = document.createElement('div');
   const divTitle = document.createElement('div');
   const removeButton = document.createElement('button');
@@ -15,7 +36,7 @@ function getLi(title, author, id) {
   divAuthor.classList.add('title');
   removeButton.classList.add('remove');
   removeButton.setAttribute('id', `button${id}`);
-  removeButton.setAttribute('onclick', `javascript:removeLi(${id})`);
+  removeButton.setAttribute('onclick', `javascript:removeLi(${id}, ${book})`);
   li.classList.add('book');
   li.setAttribute('id', `book${id}`);
 
@@ -51,18 +72,19 @@ loadData();
 addBook.addEventListener('click', () => {
   if (newTitle.value && newAuthor.value) {
     const id = bookData[bookData.length - 1] ? bookData[bookData.length - 1].id + 1 : 1;
-    bookData.push({ title: newTitle.value, author: newAuthor.value, id });
-    bookList.appendChild(getLi(bookData[bookData.length - 1].title,
-      bookData[bookData.length - 1].author,
-      bookData[bookData.length - 1].id));
+    const book = new Book(newTitle, newAuthor, id);
+    book.addBook();
+    bookList.appendChild(getLi(book));
     storeData();
   }
 });
 
-function removeLi(id) {
+function removeLi(id, book) {
   const li = document.getElementById(`book${id}`);
   li.remove();
-  bookData = bookData.filter((book) => book.id !== id);
+
+  book.removeBook();
+  // bookData = bookData.filter((book) => book.id !== id);
   storeData();
 }
 const a = 0;
