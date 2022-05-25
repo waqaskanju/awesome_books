@@ -1,3 +1,84 @@
 body {
   background-color: white;
 }
+
+.top-header {
+  margin: 15px;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 35px;
+  border: 5px solid rgb(59, 72, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-link:hover {
+  background-color: rgb(59, 72, 255);
+  transform-style: preserve-3d;
+  transition: all 500ms ease;
+}
+
+.nav-name {
+  padding-right: 400px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 96%;
+  margin: 25px;
+  border: 5px solid rgb(59, 72, 255);
+  display: flex;
+  align-self: center;
+  padding-left: 3px;
+  font-size: 1rem;
+}
+
+.time {
+  padding-left: 10px;
+  background: rgb(12, 12, 12);
+  color: #fff;
+  border: 7px solid rgb(255, 252, 252);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  width: 500px;
+}
+
+.hms {
+  font-size: 68pt;
+  font-weight: 200;
+}
+
+.ampm {
+  font-size: 22pt;
+}
+
+.date {
+  font-size: 15pt;
+}
