@@ -103,7 +103,7 @@ function setStyles() {
   let index = 1;
   const liList = document.querySelectorAll('.book');
   liList.forEach((element) => {
-    if (index % 2 !=== 0) {
+    if (index % 2 !== 0) {
       element.classList.add('bookBlack');
     }
     index += 1;
