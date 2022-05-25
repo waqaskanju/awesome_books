@@ -81,9 +81,7 @@ background-color: blue;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .wrapper {
-    /* display: inline-block; */
-  }
+
   
   #new-book {
     width: 96%;
@@ -146,12 +144,6 @@ background-color: blue;
     gap: 1rem;
   }
   
-  #date {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    text-align: right;
-    width: 96%;
-  }
   
   /*
   Activate and Deactivate styles
