@@ -3,12 +3,12 @@ function updateTime() {
 
   /* time */
   let hr;
-  const _min = (dateInfo.getMinutes() < 10) ? `0${dateInfo.getMinutes()}` : dateInfo.getMinutes();
+  const min = (dateInfo.getMinutes() < 10) ? `0${dateInfo.getMinutes()}` : dateInfo.getMinutes();
   const sec = (dateInfo.getSeconds() < 10) ? `0${dateInfo.getSeconds()}` : dateInfo.getSeconds();
   const ampm = (dateInfo.getHours() >= 12) ? 'PM' : 'AM';
 
   // replace 0 with 12 at midnight, subtract 12 from hour if 13–23
-  if (dateInfo.getHours() == 0) {
+  if (dateInfo.getHours() === 0) {
     hr = 12;
   } else if (dateInfo.getHours() > 12) {
     hr = dateInfo.getHours() - 12;
@@ -16,7 +16,7 @@ function updateTime() {
     hr = dateInfo.getHours();
   }
 
-  const currentTime = `${hr}:${_min}:${sec}`;
+  const currentTime = `${hr}:${min}:${sec}`;
 
   // print time
   document.getElementsByClassName('hms')[0].innerHTML = currentTime;
