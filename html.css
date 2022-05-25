@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
 
+
+
 li {
     list-style: none;
   }
@@ -16,18 +18,35 @@ li {
   a:visited {
     color: #000;
   }
+
+  #list-link {
+    font-size: 3rem;
+    color: black;
   
-  ul a:hover {
-    color: rgb(58, 204, 4);
-    transition-duration: 0.1s;
-    transform: scale(1.1);
+  }
+  #add-link {
+    font-size: 3rem;
+    color: black;
+
+  }
+  #contact-link {
+    font-size: 3rem;
+    color: black;
+
+  }
+  nav-hover:hover {
+background-color: blue;
+
   }
   
-  ul a:active {
-    color: green;
-    transform: scale(1.1);
-  }
+
   
+
+ #awesome {
+   color: black;
+   font-size: 4rem;
+ }
+
   button {
     appearance: none;
     border: solid 1px #000;
@@ -40,7 +59,8 @@ li {
     padding: 1rem;
     width: 96%;
     margin: 1rem auto 0;
-    border: solid 1px #000;
+    border: solid 5px rgb(59, 36, 36);
+ 
   }
   
   nav > ul {
@@ -50,30 +70,17 @@ li {
 
   footer {
     width: 96%;
-    border: solid 1px #000;
     padding: 1rem;
     margin: 0 auto 1rem;
+    margin: 1rem auto 0;
+    border: solid 5px rgb(59, 36, 36);
   }
   
-  .remove {
-    align-self: flex-end;
-    appearance: none;
-    box-shadow: 5px 5px black;
-    padding: 0.5rem;
-    transition-duration: 0.1s;
+  body  {
+    background-image:url(./img/library.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
-  .remove:hover {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-  }
-  
-  .remove:active {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-    background-color: rgb(156, 147, 147);
-  }
-  
   .wrapper {
     /* display: inline-block; */
   }
@@ -92,25 +99,6 @@ li {
     width: 50%;
     margin: 0 auto;
     padding: 0.5rem;
-  }
-  
-  #add-book {
-    padding: 0.5rem;
-    appearance: none;
-    box-shadow: 5px 5px black;
-    float: right;
-    transition-duration: 0.1s;
-  }
-  
-  #add-book:hover {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-  }
-  
-  #add-book:active {
-    transform: translate(5px, 5px);
-    box-shadow: none;
-    background-color: rgb(156, 147, 147);
   }
   
   #all-books {
@@ -143,6 +131,7 @@ li {
   #contact > * {
     width: 50%;
     margin: 2rem auto;
+    font-size: 3rem
   }
   
   #contact a {
@@ -177,3 +166,5 @@ li {
   .hide-class.active {
     left: 0;
   }
+
+  
