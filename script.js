@@ -5,7 +5,24 @@ const newAuthor = document.getElementById('new-author');
 const allBooks = document.getElementById('all-books');
 let bookData = [];
 
-setBorder();
+function setBorder() {
+  const data = JSON.parse(localStorage.getItem('bookData'));
+  if (bookData.length > 0 || data.length > 0) {
+    allBooks.classList.add('border');
+  } else if (bookData.length === 0 && data.length === 0) {
+    allBooks.classList.remove('border');
+  }
+}
+function setStyles() {
+  let index = 1;
+  const liList = document.querySelectorAll('.book');
+  liList.forEach((element) => {
+    if (index % 2 !== 0) {
+      element.classList.add('bookBlack');
+    }
+    index += 1;
+  });
+}
 
 class Book {
   constructor(title = 'title', author = 'author', id = '0') {
@@ -25,6 +42,7 @@ class Book {
   }
 }
 
+// Function create the div and li for each new book
 function getLi(book) {
   const divTitle = document.createElement('div');
   const divAuthor = document.createElement('div');
@@ -55,22 +73,27 @@ function getLi(book) {
   return li;
 }
 
+// Store data to local storage.
+
 function storeData() {
   localStorage.setItem('bookData', JSON.stringify(bookData));
 }
 
+// Load data from local storage.
+
 function loadData() {
   const data = localStorage.getItem('bookData');
-  console.log(JSON.parse(data))
   if (data) {
     bookData = JSON.parse(data);
     bookData.forEach((book) => {
       bookList.appendChild(getLi(book));
     });
     setStyles();
+    setBorder();
   }
 }
 
+// When new page is opend it first check if there is data in local stroage it load it.
 loadData();
 
 addBook.addEventListener('click', () => {
@@ -94,28 +117,11 @@ function removeLi(id) {
   storeData();
   setBorder();
 }
+
+// For removing linter errors. which say to call the removeLi function. it is called inside
+// the getLI but as it is the string type so linter is unable to recoznise it.
+
 const a = 0;
 const b = 1;
 
 if (a > b) removeLi(0);
-
-function setStyles() {
-  let index = 1;
-  const liList = document.querySelectorAll('.book')
-  liList.forEach(element => {
-    if(index%2 != 0) {
-      element.classList.add('bookBlack');
-    }
-    index += 1;
-  })
-}
-
-function setBorder() {
-  const data = JSON.parse(localStorage.getItem('bookData'));
-  if(bookData.length > 0 || data.length > 0) {
-    allBooks.classList.add('border');
-  }
-  else if(bookData.length == 0 && data.length == 0) {
-    allBooks.classList.remove('border');
-  }
-}
