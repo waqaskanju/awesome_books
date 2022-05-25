@@ -38,9 +38,9 @@
 
 👤 **Waqas Ahmad**
 
-- GitHub: [@WaqasAhmad](https://github.com/waqas)
-- Twitter: [@WaqasAhmad](https://twitter.com/waqas)
-- LinkedIn: [@WaqasAhmad](https://www.linkedin.com/in/waqas/)
+- GitHub: [@WaqasAhmad](https://github.com/waqaskanju)
+- Twitter: [@WaqasAhmad](https://twitter.com/waqaskanju)
+- LinkedIn: [@WaqasAhmad](https://www.linkedin.com/in/waqaskanju/)
 
 
 
