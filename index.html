@@ -11,18 +11,21 @@
 </head>
 
 <body>
-<h1 id="aw">Awsome Books</h1>
-<nav>
-  <a id="awesome" href="index.html">Awesome Books</a>
-  <ul class="hover">
-    <li><a href="#" id="list-link">List</a></li>
-    <li><a href="#" id="add-link">Add</a></li>
-    <li><a href="#" id="contact-link">Contact</a></li>
-  </ul>
-</nav>
-<div class="date-time">
-  <p id="date-text"></p>
-</div>
+  <h1 id="aw">Awsome Books</h1>
+  <nav>
+    <a id="awesome" href="index.html">Awesome Books</a>
+    <ul class="hover">
+      <li><a href="#" id="list-link">List</a></li>
+      <li><a href="#" id="add-link">Add</a></li>
+      <li><a href="#" id="contact-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="time">
+    <span class="hms"></span>
+    <span class="ampm"></span>
+    <br>
+    <span class="date"></span>
+    </div>
   <section id="all-books">
     <ul id="book-list"></ul>
   </section>
@@ -48,13 +51,14 @@
       <li>Our address: Main St 1234, 54321 City, Country.</li>
     </ul>
   </section>
-</div>
+  </div>
 
-<footer>
-  <p>&copy;Copyright 2022. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy;Copyright 2022. All rights reserved.</p>
+  </footer>
+  <script src="clock.js"></script>
   <script src="script.js"></script>
   <script src="nav-bar.js"></script>
-  <script src="date-time.js"></script>
+
 
 </html>

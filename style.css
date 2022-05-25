@@ -39,7 +39,8 @@ body {
 }
 
 #all-books ul .bookBlack {
-  background-color: rgb(170, 170, 170);
+  background-color: rgb(59, 36, 36);
+  color: white;
 }
 
 .containerTitleAuthor {
