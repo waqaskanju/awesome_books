@@ -6,11 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="html.css">
   <title>Document</title>
 </head>
 
 <body>
-  <h1>Awsome Books</h1>
+<h1>Awsome Books</h1>
+<nav>
+  <a href="index.html">Awesome Books</a>
+  <ul>
+    <li><a href="#" id="list-link">List</a></li>
+    <li><a href="#" id="add-link">Add</a></li>
+    <li><a href="#" id="contact-link">Contact</a></li>
+  </ul>
+</nav>
   <section id="all-books">
     <ul id="book-list"></ul>
   </section>
@@ -27,6 +36,21 @@
       </div>
     </fieldset>
   </section>
+  <section id="contact" class="hide-class">
+    <h2>Contact Information</h2>
+    <p>Do you have any questions or just want to say "Hello"? You can reach out to us!</p>
+    <ul>
+      <li>Our email <a href="mailto:mail@mail.com">mail@mail.com</a>.</li>
+      <li>Our phone number <a href="tel:+18005551234">+1 800 5551235</a>.</li>
+      <li>Our address: Main St 1234, 54321 City, Country.</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <p>&copy;Copyright 2022. All rights reserved.</p>
+</footer>
   <script src="script.js"></script>
+  <script src="nav-bar.js"></script>
 
 </html>
