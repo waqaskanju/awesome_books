@@ -61,7 +61,7 @@ function storeData() {
 
 function loadData() {
   const data = localStorage.getItem('bookData');
-  console.log(JSON.parse(data))
+  console.log(JSON.parse(data));
   if (data) {
     bookData = JSON.parse(data);
     bookData.forEach((book) => {
@@ -101,21 +101,20 @@ if (a > b) removeLi(0);
 
 function setStyles() {
   let index = 1;
-  const liList = document.querySelectorAll('.book')
-  liList.forEach(element => {
-    if(index%2 != 0) {
+  const liList = document.querySelectorAll('.book');
+  liList.forEach((element) => {
+    if (index % 2 !=== 0) {
       element.classList.add('bookBlack');
     }
     index += 1;
-  })
+  });
 }
 
 function setBorder() {
   const data = JSON.parse(localStorage.getItem('bookData'));
-  if(bookData.length > 0 || data.length > 0) {
+  if (bookData.length > 0 || data.length > 0) {
     allBooks.classList.add('border');
-  }
-  else if(bookData.length == 0 && data.length == 0) {
+  } else if (bookData.length === 0 && data.length == 0) {
     allBooks.classList.remove('border');
   }
 }
