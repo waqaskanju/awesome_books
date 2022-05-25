@@ -16,7 +16,7 @@ function updateTime() {
     hr = dateInfo.getHours();
   }
 
-  const currentTime = `${hr}:${_min}:${sec}`;
+  const currentTime = `${hr}:${min}:${sec}`;
 
   // print time
   document.getElementsByClassName('hms')[0].innerHTML = currentTime;
