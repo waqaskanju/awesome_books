@@ -117,6 +117,10 @@ body {
   font-size: 3rem;
 }
 
+ul li a:hover {
+  background-color: yellow;
+}
+
 #contact a {
   text-decoration: underline;
 }
@@ -153,7 +157,12 @@ body {
 }
 
 .time > span {
-  padding-right:10px; 
+  padding-right: 10px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
 }
 
 /*
