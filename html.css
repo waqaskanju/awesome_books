@@ -91,14 +91,6 @@ body {
   padding: 0.5rem;
 }
 
-#all-books {
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  width: 96%;
-  margin: 0 auto 1rem;
-}
-
 #book-list li {
   list-style: none;
   width: 100%;
