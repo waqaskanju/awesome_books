@@ -1,5 +1,5 @@
 const allBooksSection = document.getElementById('all-books');
-const listLink = document.getElementById('list-link')
+const listLink = document.getElementById('list-link');
 const addLink = document.getElementById('add-link');
 const contactLink = document.getElementById('contact-link');
 const addNewBookSection = document.getElementById('add-new-book');
