@@ -152,6 +152,10 @@ body {
   font-size: 20pt;
 }
 
+.time > span {
+  padding-right:10px; 
+}
+
 /*
   Activate and Deactivate styles
   */
